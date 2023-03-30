@@ -11,33 +11,62 @@
 </head>
 
 <body>
-    <!-- Display Highscores and the countdown timer-->
-<header>
-    <div class="header">
-    <div>
+<!-- Display Highscores and the countdown timer-->
+
+  <div class="header">
         <span id="highscore">View Highscores</span>
-        <span id="countdown">Time: 75 seconds</span>
+        <span id="countdown">Time: 60 seconds</span>
+  </div>
+
+<!-- quiz intro and start quiz button -->
+  <div class="javascript">
+    <h1 class="javascript">How well do you know JavaScript?</h1>
+        <p class="instructions">
+            This is a JavaScript Test. How well do you know JavaScript? The test is timed and you have 60 seconds to compete the test.
+            Everyime you select the wrong answer, you will lose 5 seconds instantly form the timer. When you have answered all the questions, the time left will be your final score.
+            Good luck! Happy Scoring! Happy Coding!
+        </p>
+        <div style="text-align:center;">
+      <button type="button" class="btn start-btn">Start Quiz</button>
+  </div>
+  </div>
+
+<!-- Section to where all the elements for the Q&A to be held until triggered -->
+    <div class="the-test">
+     <h3 class="question"></h3>
+        <button type="button" class="btn trigger choice1"></button>
+        <button type="button" class="btn trigger choice2"></button>
+        <button type="button" class="btn trigger choice3"></button>
+        <button type="button" class="btn trigger choice4"></button>
+<!-- displays correct or incorrect-->
+        <span id="correct-incorrect"></span>
+    </div>
+
+<!-- User area to enter their initials when they complete the test -->
+  <div class="initials-section">
+    <div class="margin">
+        <h3>Thank you for taking the JavaScript Test!</h3>
+        <p>Enter Your Initials Here:</p>
+        <input type="text" id="initials" name="initials" placeholder="initials"><br>
+        <button type="submit" class="btn trigger submit-btn">Submit</button>
+    </div>
+  </div>
+
+<!--View Highscore for both current and previous records-->
+  <div class="the-score">
+    <div class="margin">
+      <div class="highscores-div">
+        <h3>Highscores</h3>
+        <p>Click on View Highscores to see all the past scores</p>
+        <div class="user-scores"></div>
+        <button type="button" class="btn trigger highscore-btn start-over clear-highscores">Start Over</button>
+        <button type="button" class="btn trigger highscore-btn start-over clear-highscores">Clear Highscores</button>
       </div>
     </div>
-</header>
+  </div>
 
-<section id="quiz">
-    <h1 class="JavaScript-h1">How well do you know JavaScript?</h1>
-    <br>
-    <p class="instructions">
-      This is a JavaScript Test. How well do you know JavaScript? The test is timed and you have 75 seconds to compete the test.
-      Everyime you select the wrong answer, you will lose 10 seconds instantly form the timer. When you have answered all the questions, the time left will be your final score.
-      Good luck! Happy Scoring! Happy Coding!
-    </p>
-    <br>
-    <button type="button" class="btn">Start Quiz</button>
-</section>
-
-
-
-
-    <!-- This is where we link the JavaScript code-->
-    <script src="./assets/js/script.js"></script>
-
+<!-- This is where we link the JavaScript code-->
+  <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
